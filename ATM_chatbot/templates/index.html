@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language Selection</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-image: url('/static/firstpage.jpg'); /* Replace with your actual image URL */
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        h1 {
+            color: #3498db;
+        }
+
+        p {
+            color: #FF0000;
+            margin-bottom: 20px;
+            font-size: 16px;
+
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        label {
+            color: #3498db;
+            font-weight: bold;
+        }
+
+        select {
+            padding: 5px;
+            font-size: 16px;
+            border: 1px solid #3498db;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #3498db;
+            color: #fff;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        p.bot {
+            font-size: 18px;
+            font-weight: bold;
+            color: #27ae60;
+        }
+
+        /* Social Links Styling */
+        .social-links {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #f2f2f2;
+            padding: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .social-links a {
+            display: inline-block;
+            margin: 0 10px;
+            color: #3498db;
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+        .social-links img {
+            width: 30px; /* Adjust the size as needed */
+            height: 30px; /* Adjust the size as needed */
+            margin: 0 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Welcome!</h1>
+        <p>Select your preferred language:</p>
+
+        <form action="/set_language" method="post">
+            <label for="language">Language:</label>
+            <select name="language" id="language">
+                <option value="English" {% if selected_language =='English' %}selected{% endif %}>English</option>
+                <option value="Tamil" {% if selected_language =='Tamil' %}selected{% endif %}>Tamil</option>
+                <option value="Hindi" {% if selected_language =='Hindi' %}selected{% endif %}>Hindi</option>
+            </select>
+            <button type="submit">Set Language</button>
+        </form>
+
+        <!-- <p class="bot">bot in {{ selected_language }}: {% if selected_language == 'English' %}Hello!{% elif selected_language == 'Spanish' %}¡Hola!{% endif %}</p> -->
+    </div>
+
+    <!-- Social Links -->
+    <div class="social-links">
+        <a href="https://www.facebook.com/" target="_blank"><img src="/static/facebook.png" alt="Facebook"></a>
+        <a href="https://www.linkedin.com/" target="_blank"><img src="/static/linkedin.png" alt="LinkedIn"></a>
+        <a href="https://github.com/" target="_blank"><img src="/static/github.png" alt="GitHub"></a>
+        <a href="https://gmail.com/" target="_blank"><img src="/static/whatsapp.png" alt="Gmail"></a>
+    </div>
+</body>
+
+</html>
