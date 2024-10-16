@@ -1,0 +1,17 @@
+step:1
+cd D:\ATM Project\ATM_chatbot\MyEnv\Scripts
+step:2
+activate
+step:3
+cd D:\ATM Project\ATM_chatbot
+step:4
+python app.py
+
+
+
+
+step:1 
+cd D:\ATM Project\ATM_chatbot conda activate chatbot
+
+step:2
+python app.py

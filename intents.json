@@ -1,0 +1,89 @@
+{
+    "intents": [{
+            "tag": "greetings",
+            "patterns": ["hi there", "hello"," ","","good morning", "hi", "hey", "holla", "hello","good evening","good eveneing"],
+            "responses": ["hello thanks for checking in", "hi there, how can i help you","hi there, how can i help you"],
+            "context": [""]
+        },
+        {
+            "tag": "goodbye",
+            "patterns": ["bye", "good bye", "see you later"],
+            "responses": ["have a nice time, welcome back again", "bye bye"],
+            "context": [""]
+        },
+        {
+            "tag": "thanks",
+            "patterns": ["Thanks", "okay","Thank you","thankyou", "That's helpful", "Awesome, thanks", "Thanks for helping me", "wow", "great"],
+            "responses": ["Happy to help!","you're welcome", "My pleasure"],
+            "context": [""]
+        },
+        {
+            "tag": "noanswer",
+            "patterns": [""],
+            "responses": ["Sorry, I didn't understand you", "Please give me more info", "Not sure I understand that"],
+            "context": [""]
+        },
+        {
+            "tag": "check_balance",
+            "patterns": ["Check my balance","balance details", "What's my account balance", "Balance inquiry","balance","balance amount"],
+            "responses": ["your account balance is 100"],
+            "context": [""]
+        },
+        {
+            "tag": "withdrawal details",
+            "patterns": ["withdrawal money details?"],
+            "responses": ["Insert your ATM card.Enter your PIN.\nSelect \"Withdrawal\" or \"Cash Withdrawal\" option.\nEnter the amount you want to withdraw.\nConfirm the withdrawal amount.\nTake your cash and receipt (if offered).\nRetrieve your card."],
+            "context": [""]
+        },
+       {
+            "tag": "deposit",
+            "patterns": ["depositing ([0-9]+)","depositing amount ([0-9]+)","depositing cash ([0-9]+)","depositing money ([0-9]+)"],
+            "responses": ["$1 successfully deposited into your account"],
+            "context": ""
+          },
+        {
+        "tag": "withdraw_money",
+        "patterns": ["withdrawl ([0-9]+)"],
+        "responses": ["$1 successfully withdrawled  into your account"],
+        "context": ""
+      }
+      ,
+      {
+        "tag": "deposit details",
+        "patterns": ["deposit details"],
+        "responses": ["Insert ATM card.\nEnter PIN.\nSelect \"Deposit\".\nChoose account type.\nInsert cash/checks.\nConfirm amount.\nFinish transaction.\nTake receipt (optional).\nRetrieve card and cash/receipt."],
+        "context": [""]
+      },
+      {
+        "tag": "pin_reset",
+        "patterns": ["Reset PIN", "I forgot my PIN, can you reset ?", "Change my PIN ", "pin change?","forget pin"],
+        "responses": ["Contact your bank.\nVerify your identity.\nRequest a PIN reset.\nFollow their instructions to set a new PIN."],
+        "context": [""]
+      },
+      {
+        "tag": "transaction_history",
+        "patterns": ["Check my transaction history", "View recent transactions", "Transaction details"],
+        "responses": ["Certainly, let me retrieve your recent transactions for you. Do you have a specific time frame in mind?", "Checking your transaction history. Please wait a moment."],
+        "context": [""]
+      },
+      {
+        "tag": "balance_inquiry",
+        "patterns": ["Check my balance", "What's my account balance", "Balance inquiry"],
+        "responses": [ "Checking your account balance now. Your account balance is 1000"],
+        "context": [""]
+      },
+      {
+        "tag": "card_blocked",
+        "patterns": ["My card is blocked", "Unlock my card", "Card blocked"],
+        "responses": ["your card is block now"],
+        "context": [""]
+      },
+      {
+        "tag": "card_expired",
+        "patterns": ["My card is expired", "Renew ATM card", "Expired card"],
+        "responses": ["Your card is expires on 2028 Aug 25"],
+        "context": [""]
+      }
+    ]
+}
+
